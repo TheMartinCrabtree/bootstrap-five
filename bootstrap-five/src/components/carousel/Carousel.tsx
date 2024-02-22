@@ -1,48 +1,48 @@
 import React from "react";
-import { Carousel } from "react-bootstrap";
+import { Carousel as BootstrapCarousel } from "react-bootstrap";
 
-const MyCarousel = () => {
+const Carousel = () => {
   return (
-    <Carousel>
-      <Carousel.Item>
+    <BootstrapCarousel>
+      <BootstrapCarousel.Item>
         <img
           className="d-block w-100"
           src="https://via.placeholder.com/800x400"
           alt="First slide"
         />
-        <Carousel.Caption>
+        <BootstrapCarousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
+        </BootstrapCarousel.Caption>
+      </BootstrapCarousel.Item>
+      <BootstrapCarousel.Item>
         <img
           className="d-block w-100"
           src="https://via.placeholder.com/800x400"
           alt="Second slide"
         />
 
-        <Carousel.Caption>
+        <BootstrapCarousel.Caption>
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
+        </BootstrapCarousel.Caption>
+      </BootstrapCarousel.Item>
+      <BootstrapCarousel.Item>
         <img
           className="d-block w-100"
           src="https://via.placeholder.com/800x400"
           alt="Third slide"
         />
 
-        <Carousel.Caption>
+        <BootstrapCarousel.Caption>
           <h3>Third slide label</h3>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+        </BootstrapCarousel.Caption>
+      </BootstrapCarousel.Item>
+    </BootstrapCarousel>
   );
 };
 
-export default MyCarousel;
+export default Carousel;
