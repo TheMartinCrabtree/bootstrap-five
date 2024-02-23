@@ -1,7 +1,16 @@
 import React from "react";
 import { Carousel as BootstrapCarousel } from "react-bootstrap";
+import CarouselItem from "./CarouselItem";
 
-const Carousel = () => {
+// const carouselData = [
+
+// ];
+
+const Carousel = (props) => {
+  const { carouselData } = props;
+
+  const _renderItems = () => {};
+
   return (
     <BootstrapCarousel>
       <BootstrapCarousel.Item>
