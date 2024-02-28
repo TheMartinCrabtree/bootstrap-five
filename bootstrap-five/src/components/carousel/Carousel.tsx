@@ -44,7 +44,8 @@ const Carousel = (props) => {
 
   return (
     <BootstrapCarousel>
-      <BootstrapCarousel.Item>
+      {carouselData && _renderItems(carouselData)}
+      {/* <BootstrapCarousel.Item>
         <img
           className="d-block w-100"
           src="https://via.placeholder.com/800x400"
@@ -80,7 +81,7 @@ const Carousel = (props) => {
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
         </BootstrapCarousel.Caption>
-      </BootstrapCarousel.Item>
+      </BootstrapCarousel.Item> */}
     </BootstrapCarousel>
   );
 };
