@@ -23,13 +23,21 @@ const Carousel = (props) => {
 
   const _renderItems = (dataArr) => {
     return dataArr.map((cardData) => {
-      const { imgData, textData, linkData } = dataArr;
+      const { imgData, textData, linkData } = cardData;
       return (
-        <div>
-          {imgData}
-          {textData}
-          {linkData}
-        </div>
+        <BootstrapCarousel.Item>
+          {imgData && imgData.srcData && (
+            <img
+              className="d-block w-100"
+              src={imgData.srcData}
+              alt={imgData.altData}
+            />
+          )}
+          <BootstrapCarousel.Caption>
+            <h3>{textData.headingText}</h3>
+            <p>{textData.bodyText}</p>
+          </BootstrapCarousel.Caption>
+        </BootstrapCarousel.Item>
       );
     });
   };
