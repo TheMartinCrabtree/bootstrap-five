@@ -2,14 +2,37 @@ import React from "react";
 import { Carousel as BootstrapCarousel } from "react-bootstrap";
 import CarouselItem from "./CarouselItem";
 
-// const carouselData = [
-
-// ];
+/*
+const carouselData = [
+  {
+    imgData:{
+      srcData: "https://via.placeholder.com/800x400",
+      altData: "First slide"
+    },
+    textData:{
+      headingText: "First slide label",
+      bodyText: "Nulla vitae elit libero, a pharetra augue mollis interdum."
+    },
+    linkData:{}
+  },
+];
+*/
 
 const Carousel = (props) => {
   const { carouselData } = props;
 
-  const _renderItems = () => {};
+  const _renderItems = (dataArr) => {
+    return dataArr.map((cardData) => {
+      const { imgData, textData, linkData } = dataArr;
+      return (
+        <div>
+          {imgData}
+          {textData}
+          {linkData}
+        </div>
+      );
+    });
+  };
 
   return (
     <BootstrapCarousel>
