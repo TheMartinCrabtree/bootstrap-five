@@ -2,53 +2,12 @@ import React from "react";
 import { Carousel as BootstrapCarousel } from "react-bootstrap";
 import CarouselItem from "./CarouselItem";
 
-/*
-const carouselData = [
-  {
-    id: "101",
-    imgData:{
-      srcData: "https://via.placeholder.com/800x400",
-      altData: "First slide"
-    },
-    textData:{
-      headingText: "First slide label",
-      bodyText: "Nulla vitae elit libero, a pharetra augue mollis interdum."
-    },
-    linkData:{}
-  },
-  {
-    id: "102",
-    imgData:{
-      srcData: "https://via.placeholder.com/800x400",
-      altData: "Second slide"
-    },
-    textData:{
-      headingText: "Second slide label",
-      bodyText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    linkData:{}
-  },
-  {
-    id: "103",
-    imgData:{
-      srcData: "https://via.placeholder.com/800x400",
-      altData: "Third slide"
-    },
-    textData:{
-      headingText: "Third slide label",
-      bodyText: "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
-    },
-    linkData:{}
-  },
-];
-*/
-
 const Carousel = (props) => {
   const { carouselData } = props;
 
   const _renderItems = (dataArr) => {
     return dataArr.map((cardData) => {
-      const { imgData, textData, linkData } = cardData;
+      const { imgData, textData, linkData, id } = cardData;
       return (
         <BootstrapCarousel.Item>
           {imgData && imgData.srcData && (
@@ -70,43 +29,6 @@ const Carousel = (props) => {
   return (
     <BootstrapCarousel>
       {carouselData && _renderItems(carouselData)}
-      {/* <BootstrapCarousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://via.placeholder.com/800x400"
-          alt="First slide"
-        />
-        <BootstrapCarousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </BootstrapCarousel.Caption>
-      </BootstrapCarousel.Item>
-      <BootstrapCarousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://via.placeholder.com/800x400"
-          alt="Second slide"
-        />
-
-        <BootstrapCarousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </BootstrapCarousel.Caption>
-      </BootstrapCarousel.Item>
-      <BootstrapCarousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://via.placeholder.com/800x400"
-          alt="Third slide"
-        />
-
-        <BootstrapCarousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </BootstrapCarousel.Caption>
-      </BootstrapCarousel.Item> */}
     </BootstrapCarousel>
   );
 };
