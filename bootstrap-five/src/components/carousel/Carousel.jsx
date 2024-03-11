@@ -1,6 +1,12 @@
 import React from "react";
 import { Carousel as BootstrapCarousel } from "react-bootstrap";
+import styled from "styled-components";
 import CarouselItem from "./CarouselItem";
+
+const Wrapper = styled.div`
+  max-width: 1920px;
+  max-height: 1080px;
+`;
 
 const Carousel = (props) => {
   const { carouselData } = props;
@@ -27,9 +33,11 @@ const Carousel = (props) => {
   };
 
   return (
-    <BootstrapCarousel>
-      {carouselData && _renderItems(carouselData)}
-    </BootstrapCarousel>
+    <Wrapper>
+      <BootstrapCarousel>
+        {carouselData && _renderItems(carouselData)}
+      </BootstrapCarousel>
+    </Wrapper>
   );
 };
 
